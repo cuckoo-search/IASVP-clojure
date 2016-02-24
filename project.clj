@@ -19,6 +19,8 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [com.googlecode.matrix-toolkits-java/mtj "1.0.4"]]
 
+  :resource-paths ["resources/*"]
+
   :main ^:skip-aot cuckoo-search-clj.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})

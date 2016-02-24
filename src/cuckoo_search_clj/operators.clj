@@ -90,9 +90,7 @@
   "Replace some nests by constructing new solutions/nests"
   [cs]
   (let [rand* (rand)
-        {:keys [nest perm1 perm2], :as cs} (->> cs
-                                             (#(update % :perm1 shuffle))
-                                             (#(update % :perm2 shuffle)))]
+        {:keys [nest perm1 perm2], :as cs} (->> cs (#(update % :perm1 shuffle)) (#(update % :perm2 shuffle)))]
     (assoc cs :new-nest (mapv (partial empty-nest-process-problem rand* cs) nest perm1 perm2))))
 
 (defn empty-nest-process-solution

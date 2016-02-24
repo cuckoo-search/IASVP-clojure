@@ -12,7 +12,7 @@
   (:require [cuckoo-search-clj.operators :refer :all]))
 
 (defn create-eggs
-  "Function to create solution
+  "Function to create initials solutions
    nd   ->   number of dimensions.
    eggs ->   number of nests (or different solutions).
    gen  ->   function to generate random dimension.
@@ -61,6 +61,9 @@
       (recur (update (reduce #(%2 %) cs* ops) :niter inc) ops))))
 
 (defn random
-  "Random value between lb and ub"
+  "Random value between lb and ub
+  lb -> lower bounds
+  up -> upper bounds
+  "
   [lb ub]
   (+ (* (rand) (- ub lb)) lb))

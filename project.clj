@@ -16,8 +16,7 @@
   :license {:name "GNU Affero General Public License"
             :url "http:www.gnu.org/licenses/agpl-3.0.txt"}
 
-  :dependencies [[org.clojure/clojure "1.8.0"]
-                 [com.googlecode.matrix-toolkits-java/mtj "1.0.4"]]
+  :dependencies [[org.clojure/clojure "1.8.0"]]
 
   :resource-paths ["resources/*"]
 
